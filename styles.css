@@ -1,0 +1,15 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #fff;
+    letter-spacing: 0.2em;
+    font-size: 0.8em;
+}
+.container {
+    max-width: 400px;
+}
