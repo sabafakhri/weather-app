@@ -10,6 +10,7 @@ app.use(express.static('public'));
 
 // Create a new endpoint for getting city data
 app.get('/api/city/:city', async (req, res) => {
+    
     const city = req.params.city;
     const url = `http://dataservice.accuweather.com/locations/v1/cities/search?apikey=${ACCUWEATHER_API_KEY}&q=${city}`;
     try {
@@ -23,6 +24,7 @@ app.get('/api/city/:city', async (req, res) => {
 
 // Create a new endpoint for getting weather data
 app.get('/api/weather/:key', async (req, res) => {
+
     const locationKey = req.params.key;
     const url = `http://dataservice.accuweather.com/currentconditions/v1/${locationKey}?apikey=${ACCUWEATHER_API_KEY}`;
     try {
