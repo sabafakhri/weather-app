@@ -21,13 +21,6 @@ const updateUI = (data) => {
     //update Day/Night time & icon
     const iconSrc = `/Public/assets/icons/${weather.WeatherIcon}.svg`;
     icon.setAttribute("src", iconSrc);
-
-    // let timeSrc = null;
-    // if(weather.IsDayTime){
-    //     timeSrc = "/Public/assets/img/day.jpg";
-    // }else {
-    //     timeSrc = "/Public/assets/img/night.jpg";
-    // }
     
     let timeSrc = weather.IsDayTime ? "/Public/assets/img/day.jpg" : "/Public/assets/img/night.jpg"; 
     time.setAttribute("src", timeSrc);
